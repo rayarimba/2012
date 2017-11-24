@@ -1,1 +1,908 @@
-"Hello World" 
+<html>
+<head>
+<meta name="author" content="rimba_raya">
+<meta name="description" content="ULTAH AJENG">
+<meta name="keywords" content="The Art of Indonesian">
+
+<script language="JavaScript">alert("Happy Birthdy to My LOVE");</script>
+<script language="JavaScript">alert("Ananda Ajeng Pangestu");</script>
+<script language="JavaScript">alert("December 10, 2012");</script>
+
+<!-- TITLE -->
+<script language="JavaScript">function tb5_makeArray(n){ this.length = n; return this.length;
+}
+tb5_messages = new tb5_makeArray(2);
+tb5_messages[0] = "Happy Birthday";
+tb5_messages[1] = "..:: SWEET-HEART ::..";
+tb5_rptType = 'infinite';
+tb5_rptNbr = 100;
+tb5_speed = 200;
+tb5_delay = 50;
+var tb5_counter=1;
+var tb5_currMsg=0;
+var tb5_stsmsg="";
+function tb5_shuffle(arr){
+var k;
+for (i=0; i<arr.length; i++){ k = Math.round(Math.random() * (arr.length - i - 1)) + i; temp = arr[i];arr[i]=arr[k];arr[k]=temp;
+}
+return arr;
+}
+tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length);
+for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_";
+}
+tb5_arr = tb5_shuffle(tb5_arr);
+function tb5_init(n){
+var k;
+if (n == tb5_arr.length){ if (tb5_currMsg == tb5_messages.length-1){ if ((tb5_rptType == 'finite') && (tb5_counter==tb5_rptNbr)){ clearTimeout(tb5_timerID); return; } tb5_counter++; tb5_currMsg=0; } else{ tb5_currMsg++; } n=0; tb5_arr = new tb5_makeArray(tb5_messages[tb5_currMsg].length); tb5_sts = new tb5_makeArray(tb5_messages[tb5_currMsg].length); for (var i=0; i<tb5_messages[tb5_currMsg].length; i++){ tb5_arr[i] = i; tb5_sts[i] = "_"; } tb5_arr = tb5_shuffle(tb5_arr); tb5_sp=tb5_delay;
+}
+else{ tb5_sp=tb5_speed; k = tb5_arr[n]; tb5_sts[k] = tb5_messages[tb5_currMsg].charAt(k); tb5_stsmsg = ""; for (var i=0; i<tb5_sts.length; i++) tb5_stsmsg += tb5_sts[i]; document.title = tb5_stsmsg; n++; } tb5_timerID = setTimeout("tb5_init("+n+")", tb5_sp);
+}
+function tb5_randomizetitle(){ tb5_init(0);
+}
+tb5_randomizetitle();
+</script>
+<script type='text/javascript'>
+scrW=screen.availWidth
+scrH=screen.availHeight
+window.resizeTo(10,10)
+window.focus()
+for(a=0;a<80;a++){
+window.moveTo(0,0)
+window.resizeTo(0,scrH*a/80)
+}
+window.resizeTo(0,0)
+for(b=0;b<80;b++){
+window.moveTo(0,scrH/1)
+window.resizeTo(scrW*b/80,0)
+}
+for(c=0;c<80;c++){
+window.moveTo(scrW/1,scrH/1)
+window.resizeTo(0,scrH*c/80)
+}
+for(d=0;d<80;d++){
+window.moveTo(scrW/1,0)
+window.resizeTo(scrW*d/80,0)
+}
+for(e=0;e<80;e++){
+window.resizeTo(scrW*e/80,scrH*e/80)
+}
+window.moveTo(0,0)
+window.resizeTo(scrW,scrH)
+</script>
+
+<script> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+} 
+</script>
+
+<!-- LOVE RAIN -->
+<script src='http://vikrymadz.googlecode.com/files/taburan love.js' type='text/javascript'/>
+<script src="efek.js"></script>
+<script src='snow.js' type='text/javascript'> </script>
+<script> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+}  
+</script>
+
+<!-- Close -->
+<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+this.onunload = function() { OnCloseWindows(this); return 0; };
+function OnCloseWindows(win)
+{
+alert("DONT CLOSE !!!" );
+alert("yeee, ngeyell..." );
+alert("JANGAN DI TUTUP YAA !!!" );
+alert("yaudah deh kalo maksa..." );
+alert("BTW Met ULTAH yaaaa...." );
+}
+</SCRIPT>
+
+<!-- Klik Kanan -->
+<script language="javascript">
+function shake(n) {
+if (parent.moveBy) {
+for (i = 10; i > 0; i--) {
+for (j = n; j > 0; j--) {
+self.resizeTo(250,150);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+parent.moveBy(0,i);}}}}
+PopUpURL = "Uppsss..!!Jangan klik kanan nanti error lhooo..!!!";
+isIE=document.all;
+isNN=!document.all&&document.getElementById;
+isN4=document.layers;
+if (isIE||isNN)
+{
+document.oncontextmenu=checkV;
+}
+else
+{
+document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
+document.onmousedown=checkV;
+}
+function checkV(e)
+{
+if (isN4)
+{
+if (e.which==2||e.which==3)
+{
+dPUW=alert("Dibilangin");
+shake(2);
+return false;
+}
+}
+else
+{
+dPUW=alert(PopUpURL);
+shake(2);
+return false;
+}
+}
+</script>
+
+<script type="text/javascript">
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true;
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 90 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() 
+{
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+  if(this.running) return;
+  if(typeof this.origText == "undefined") {
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+    return;
+  }
+  if(this.currentText == "") this.element.innerHTML = "";
+  if(this.currentChar < this.origText.length) {
+    if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+      this.tagBuffer = "<";
+      this.inTag = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+      this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+      this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+      this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+    this.currentChar++;
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+  } else {
+ this.currentText = "";
+ this.currentChar = 0;
+        this.running = false;
+        this.finishedCallback();
+  }
+}
+</script>
+
+<!-- Mouse -->
+<script type="text/javascript">
+var colour="#00FFFF";
+var sparkles=80;
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+function sparkle() {
+  var c;
+  if (x!=ox || y!=oy) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      starx[i]+=(i%5-2)/5;
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tinyx[i]+=(i%5-2)/5;
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+document.onmousemove=mouse;
+function mouse(e) {
+  set_scroll();
+  y=(e)?e.pageY:event.y+sdown;
+  x=(e)?e.pageX:event.x+sleft;
+}
+function set_scroll() {
+  if (typeof(self.pageYOffset)=="number") {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body.scrollTop || document.body.scrollLeft) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+	sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+window.onresize=set_width;
+function set_width() {
+  if (typeof(self.innerWidth)=="number") {
+    swide=self.innerWidth;
+    shigh=self.innerHeight;
+  }
+  else if (document.documentElement && document.documentElement.clientWidth) {
+    swide=document.documentElement.clientWidth;
+    shigh=document.documentElement.clientHeight;
+  }
+  else if (document.body.clientWidth) {
+    swide=document.body.clientWidth;
+    shigh=document.body.clientHeight;
+  }
+}
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+</script>
+
+<!-- ISI -->
+<center>
+<style type="text/css">.style2{font-family:"Cooper Black";font-size:x-large;text-shadow:red 0px 0px 4px;}.style3{color:#FF0000;text-shadow:red 0px 0px 4px;font-size:14pt;font-family:"Old English Text MT";}.style5{color:#FF0000;text-shadow:red 0px 0px 4px;}.style6{color:#008000;font-size:11pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style7{font-size:13pt;text-shadow:red 0px 0px 4px;}.style8{color:#008000;text-shadow:red 0px 0px 4px;}.style9{font-family:"Comic Sans MS";text-shadow:red 0px 0px 4px;}.style10{font-size:11pt;text-shadow:red 0px 0px 4px;}.style11{font-family:"Modern No. 20";font-size:14pt;text-shadow:red 0px 0px 4px;}.style12{color:#000000;text-shadow:red 0px 0px 4px;}.style13{font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style14{font-size:13pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style15{color:#008000;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style16{font-size:11pt;font-family:"MV Boli";color:#FF0000;text-shadow:red 0px 0px 4px;}.style17{text-decoration:none;text-shadow:red 0px 0px 4px;}.style18{color:#000000;}.style19{text-decoration:none;}.style20{color:#008000;font-size:13pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}.style21{color:#FF0000;}.style22{color:#000000;font-size:xx-large;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}.style24{color:#000000;background-color:#FFFFFF;}.style25{font-size:xx-large;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}.style26{color:#FF7F00;font-size:xx-large;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}
+</style>
+<center><p class="style5" align="center">
+ <font color="#ffffff"></font></p><div id="ULTAH"><font color="#ffffff">
+<p class="style5" align="center"><font face="Courier New" size="2"><font color="#00FF00"><b>                                                      
+<center>+---------------------------------------------<font color="#FF0000" size="5">Happy Birhtday to Ananda Ajeng Pangestu</font>---------------------------------------------+
+</center>
+<div id="example1"></div></b></font><div class="layermensaje" id="ttecleado" ?=""><p align="lef"><font size="4" face="Tahoma">
+<p id="example2"><font face="Tahoma" size="4" color="#00ff00">
+Hari ini Adalah Hari Spesial :)<br><br>
+
+Dengan bertambah nya usia, Itu Artinya Berkuranglah Jatah hidup Kita di dunia...<br>
+Tetapi itu tidak mengurangi dalam nya Rasa Sayang ini...<br>
+Bahkan dengan Seiring Berjalan nya Waktu...<br>
+Rasa Ini Semakin kokoh dan Menyenangkan...<br><br>
+
+Dari hari ke hari banyak hal yang sudah kita lewati...<br>
+Banyak hal yang membuat kita makin kuat...<br>
+Tetapi jangan terlalu larut dalam kesenangan Sayang...<br>
+Di depan masih banyak lagi yang harus kita hadapi...<br><br>
+
+Jika pada saat kita ada masalah...<br>
+Ingatlah kalo itu hanyalah ujian...<br>
+Janganlah menyerah ataupun putus asa...<br>
+Tetaplah Kuat dan Tegar...<br>
+Jadilah karang lautan yang selalu tegar di terpa ombak...<br><br>
+
+Ingatlah selalu bahwa...<br>
+Aku ingin bersamamu untuk saling menjaga, baik Suka maupun duka...<br>
+Seperti cahaya surya yang selalu menepati janjinya menunggumu bangun disetiap pagi...<br>
+Atau seperti rembulan malam yang betah diujung langit meski kadang di kealfaan bintang...<br><br>
+
+Selamat Ulang Tahun Sayang.. :)<br>
+Smoga Bertambah Dewasa & Tetap Menjadi Kebanggaan Keluarga<br>
+And WISH U ALL The BEST<br><br>
+
+Love U Ananda Ajeng Pangestu<br>
+
+<font face="Courier New" color="red" size="3">
+<font face="Bradley Hand ITC" color="white" size="4">
+<br>Sayang Kamu Honey</font>
+<br>Agung Nugroho aka Rimba Raya</font><br><br>
+<font color="#ffffff" face="Tahoma" size="2">
+[+] Initializing Love From Target.......!!<br>
+---------------------------------------------------------------------<br>
+[+] Target Found.......!!<br>
+[+] Loving You........5%<br>
+[+] Loving You.......10%<br>
+[+] Loving You.......30%<br>
+[+] Loving You.......50%<br>
+[+] Loving You.......80%<br>
+[+] Loving You.......100% successfully..!!<br>
+
+---------------------------------------------------------------------<br>
+[+] Get Love From Target.......20%<br>
+[+] Get Love From Target.......40%<br>
+[+] Get Love From Target.......70%<br>
+[+] Get Love From Target.......90%<br>
+[+] Get Love From Target.......100% Successfully..!!<br>
+---------------------------------------------------------------------</font><br>
+
+<font color="00ff00" face="Tahoma" size="2">[+] Your Love Has Been Hacked By Rimba Raya aka Copas Coder<br>
+
+[+] Now And Forever Your Love Is Mine.......!!</font>
+<br><br><div>			
+<center>+-------------------------------------<font color="#FF0000" size="5">Happy Birhtday to Ananda Ajeng Pangestu</font>-------------------------------------+
+</center></font></font></font></font>
+<center>
+</font> </div><font color="#00FF00"><font face="Courier New" size="2"><font face="Courier New" size="2"><font face="Courier New" size="5"><font face="Courier New" size="3"><font face="Courier New" size="2"><font face="Courier New" size="3">
+<script type="text/javascript">
+new TypingText(document.getElementById("ULTAH"), 30, function(i){ var ar = new Array("", ""); return " " + ar[i.length % ar.length]; });
+TypingText.runAll();
+</script>
+<script type="text/javascript">
+new TypingText(document.getElementById("example1"));
+new TypingText(document.getElementById("example2"), 50, function(i){
+var ar = new Array("_"," ","_"," "," "); return " " + ar[i.length %
+ar.length]; });
+TypingText.runAll();
+</script>
+</center>
+</div>
+
+<!-- Hope you last love -->
+<br><center>
+<script language="JavaScript1.2">
+var message="Hope: You're Last Love in MY Life and I Can Found Happiness With You"
+var neonbasecolor="transparent"
+var neontextcolor="#00ff00"
+var flashspeed=100
+var n=0
+if (document.all||document.getElementById){
+document.write('')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('')
+}
+else
+document.write(message)
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+function neon(){
+
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+crossref(n).style.color=neontextcolor
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",1500)
+return
+}
+}
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+</script><br>
+<Style type="text/css"> body{ background-color:rgb(0,0,0); background-image:url(zanozar.com/wp-content/uploads/2009/09/glitter-pink-stars-bg.gif); background-position:top left; background-repeat:repeat; background-attachment:fixed; } </Style> 
+</center><br>
+
+<!-- Special Thanks -->
+<center><font color="#00ff00" face="Tahoma" size="4">Special Thank's :</font>
+<marquee behavior="scroll" direction="left" scrollamount="2" scrolldelay="0" width="50%"><font color="blue" face="Tahoma" size="2">| Allah & Rasulullah | My Family | Your Family | And All of My Friends | Andika Natanegara for this Script |</font></marquee><br />
+<br>
+<font face="Tahoma" size="4" color="#00ff00"><blink>LOVE YOU by Agung Nugroho</blink></font></p><br>
+</center>
+
+ <style type="text/css">
+html, body{cursor:url(AngelsLoveCursor2.gif),default;}
+</style>
+
+<script> 
+window.scrollBy(0, 1) 
+window.resizeTo(0,0) 
+window.moveTo(0,0) 
+setTimeout("move()", 1); 
+var mxm=50 
+var mym=25 
+var mx=0 
+var my=0 
+var sv=50 
+var status=1 
+var szx=0 
+var szy=0 
+var c=255 
+var n=0 
+var sm=30 
+var cycle=2 
+var done=2 
+function move() 
+{ 
+if (status == 1) 
+{ 
+mxm=mxm/1.05 
+mym=mym/1.05 
+mx=mx+mxm 
+my=my-mym 
+mxm=mxm+(400-mx)/100 
+mym=mym-(300-my)/100 
+window.moveTo(mx,my) 
+rmxm=Math.round(mxm/10) 
+rmym=Math.round(mym/10) 
+if (rmxm == 0) 
+{ 
+if (rmym == 0) 
+{ 
+status=2 
+} 
+} 
+} 
+if (status == 2) 
+{ 
+sv=sv/1.1 
+scrratio=1+1/3 
+mx=mx-sv*scrratio/2 
+my=my-sv/2 
+szx=szx+sv*scrratio 
+szy=szy+sv 
+window.moveTo(mx,my) 
+window.resizeTo(szx,szy) 
+if (sv < 0.1) 
+{ 
+status=3 
+} 
+} 
+if (status == 3) 
+{ 
+document.fgColor=0xffffFF 
+c=c-16 
+if (c<0) 
+{status=8} 
+} 
+if (status == 4) 
+{ 
+c=c+16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 239) 
+{status=5} 
+} 
+if (status == 5) 
+{ 
+c=c-16 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c < 0) 
+{ 
+status=6 
+cycle=cycle-1 
+if (cycle > 0) 
+{ 
+if (done == 1) 
+{status=7} 
+else 
+{status=4} 
+} 
+} 
+} 
+if (status == 6) 
+{ 
+document.title = "Cljck" 
+alert("Cljck") 
+cycle=2 
+status=4 
+done=1 
+} 
+if (status == 7) 
+{ 
+c=c+4 
+document.bgColor=c*65536 
+document.fgColor=(255-c)*65536 
+if (c > 128) 
+{status=8} 
+} 
+if (status == 8) 
+{ 
+window.moveTo(0,0) 
+sx=screen.availWidth 
+sy=screen.availHeight 
+window.resizeTo(sx,sy) 
+status=9 
+} 
+var timer=setTimeout("move()",0.3) 
+}  
+</div>
+</font>
+</font>
+</font>
+</font>
+</font>
+</font>
+</font>
+</p>
+</p>
+</script>
+</HEAD>
+</html>
