@@ -1,0 +1,71 @@
+html, body {
+	background-color: rgb(0, 0, 0);
+	background-position: top left;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	cursor: url(heart.gif), default;	
+}
+
+.style2 {
+    font - family: "Cooper Black";
+    font - size: x - large;
+    text - shadow: red 0 px 0 px 4 px;
+}.style3 {
+    color: #FF0000;text - shadow: red 0 px 0 px 4 px;font - size: 14 pt;font - family: "Old English Text MT";
+}.style5 {
+    color: #FF0000;text - shadow: red 0 px 0 px 4 px;
+}.style6 {
+    color: #008000;font-size:11pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style7{font-size:13pt;text-shadow:red 0px 0px 4px;}.style8{color:# 008000;text - shadow: red 0 px 0 px 4 px;
+}.style9 {
+    font - family: "Comic Sans MS";
+    text - shadow: red 0 px 0 px 4 px;
+}.style10 {
+    font - size: 11 pt;
+    text - shadow: red 0 px 0 px 4 px;
+}.style11 {
+    font - family: "Modern No. 20";
+    font - size: 14 pt;
+    text - shadow: red 0 px 0 px 4 px;
+}.style12 {
+    color: #000000;text-shadow:red 0px 0px 4px;}.style13{font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style14{font-size:13pt;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;text-shadow:red 0px 0px 4px;}.style15{color:# 008000;font - family: "Arial Rounded MT Bold",
+    forte,
+    "comic sans ms",
+    chiller;text - shadow: red 0 px 0 px 4 px;
+}.style16 {
+    font - size: 11 pt;
+    font - family: "MV Boli";
+    color: #FF0000;
+    text - shadow: red 0 px 0 px 4 px;
+}.style17 {
+    text - decoration: none;
+    text - shadow: red 0 px 0 px 4 px;
+}.style18 {
+    color: #000000;}.style19{text-decoration:none;}.style20{color:# 008000;font - size: 13 pt;font - family: "Arial Rounded MT Bold",
+    forte,
+    "comic sans ms",
+    chiller;
+}.style21 {
+    color: #FF0000;
+}.style22 {
+    color: #000000;font-size:xx-large;font-family:"Arial Rounded MT Bold",forte,"comic sans ms",chiller;}.style24{color:# 000000;background - color: #FFFFFF;
+}.style25 {
+    font - size: xx - large;
+    font - family: "Arial Rounded MT Bold", forte, "comic sans ms", chiller;
+}.style26 {
+    color: #FF7F00;font - size: xx - large;font - family: "Arial Rounded MT Bold",
+    forte,
+    "comic sans ms",
+    chiller;
+}
+ blink {
+   -webkit-animation: blink 1s step-end infinite;
+   animation: blink 1s step-end infinite
+ }
+
+  @-webkit-keyframes blink {
+  67% { opacity: 0 }
+ }
+
+ @keyframes blink {
+ 67% { opacity: 0 }
+}
